@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Sucesiones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Sucesiones</h1>
+        <div class="form-group">
+            <label for="type">Tipo de sucesión:</label>
+            <select id="type" onchange="updateFields()">
+                <option value="pictografica">Pictográfica</option>
+                <option value="aritmetica">Aritmética</option>
+                <option value="numerica">Numérica</option>
+            </select>
+        </div>
+        <div id="pictograficaFields" class="form-group">
+            <label for="startPict">Número inicial:</label>
+            <input type="number" id="startPict" value="1">
+        </div>
+        <div id="aritmeticaFields" class="form-group" style="display: none;">
+            <label for="startArit">Número inicial:</label>
+            <input type="number" id="startArit" value="1">
+            <label for="step">Paso:</label>
+            <input type="number" id="step" value="1">
+            <label for="showDivision">Mostrar división:</label>
+            <input type="checkbox" id="showDivision">
+        </div>
+        <div id="numericaFields" class="form-group" style="display: none;">
+            <label for="startNum">Número inicial:</label>
+            <input type="number" id="startNum" value="1">
+            <label for="stepNum">Paso:</label>
+            <input type="number" id="stepNum" value="1">
+            <label for="operation">Operación:</label>
+            <select id="operation">
+                <option value="multiplicacion">Multiplicación</option>
+                <option value="potenciacion">Potenciación</option>
+                <option value="factorial">Factorial</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="count">Número de términos:</label>
+            <input type="number" id="count" value="10">
+        </div>
+        <button onclick="generateSequence()">Generar Sucesión</button>
+        <div id="result"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
